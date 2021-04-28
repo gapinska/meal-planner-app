@@ -1,31 +1,31 @@
 import { apiActionTypes } from "../actionTypes/apiActionTypes"
 
 const {
-  FETCH_RECEPIES_REQUESTED,
-  FETCH_RECEPIES_SUCCEEDED,
-  FETCH_RECEPIES_FAILED,
+  FETCH_RECIPES_REQUESTED,
+  FETCH_RECIPES_SUCCEEDED,
+  FETCH_RECIPES_FAILED,
 } = apiActionTypes
 const INITIAL_STATE = {
-  recepies: {},
+  RECIPES: {},
   isLoading: false,
   isError: false,
 }
 
 const apiReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case FETCH_RECEPIES_REQUESTED:
+    case FETCH_RECIPES_REQUESTED:
       return {
         ...state,
         isLoading: true,
         isError: false,
       }
-    case FETCH_RECEPIES_SUCCEEDED:
+    case FETCH_RECIPES_SUCCEEDED:
       return {
         ...state,
         isLoading: false,
-        recepies: action.payload,
+        RECIPES: action.payload,
       }
-    case FETCH_RECEPIES_FAILED:
+    case FETCH_RECIPES_FAILED:
       return {
         ...state,
         isLoading: false,

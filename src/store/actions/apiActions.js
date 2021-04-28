@@ -1,19 +1,19 @@
 import apiActionTypes from "../actionTypes/apiActionTypes"
 const {
-  FETCH_RECEPIES_REQUESTED,
-  FETCH_RECEPIES_SUCCEEDED,
-  FETCH_RECEPIES_FAILED,
+  FETCH_RECIPES_REQUESTED,
+  FETCH_RECIPES_SUCCEEDED,
+  FETCH_RECIPES_FAILED,
 } = apiActionTypes
 
-export const fetchRecepiesrequested = () => ({
-  type: FETCH_RECEPIES_REQUESTED,
+export const fetchRecipesrequested = () => ({
+  type: FETCH_RECIPES_REQUESTED,
 })
 
-export const fetchRecepiesSucceeded = (data) => ({
-  type: FETCH_RECEPIES_SUCCEEDED,
+export const fetchRecipesSucceeded = (data) => ({
+  type: FETCH_RECIPES_SUCCEEDED,
   payload: data,
 })
 
-export const fetchRecepiesFailed = () => ({
-  type: FETCH_RECEPIES_FAILED,
+export const fetchRecipesFailed = () => ({
+  type: FETCH_RECIPES_FAILED,
 })
