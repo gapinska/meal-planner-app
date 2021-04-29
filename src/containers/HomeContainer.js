@@ -33,7 +33,6 @@ const HomeContainer = () => {
       fetchRecipes(`${GET_RECEPIES_URL}${ingredients}&apiKey=${API_KEY}`)
     )
   }
-  useEffect(() => console.log(recipes), [recipes])
 
   return (
     <div>
@@ -51,7 +50,7 @@ const HomeContainer = () => {
           </Button>
         </FormControl>
       </form>
-      {recipes && <PickedRecipes recipes={recipes} />}
+      {recipes && <PickedRecipes recipes={recipes.products} />}
     </div>
   )
 }
