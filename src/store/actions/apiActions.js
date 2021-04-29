@@ -1,11 +1,11 @@
-import apiActionTypes from "../actionTypes/apiActionTypes"
+import { apiActionTypes } from "../actionTypes/apiActionTypes"
 const {
   FETCH_RECIPES_REQUESTED,
   FETCH_RECIPES_SUCCEEDED,
   FETCH_RECIPES_FAILED,
 } = apiActionTypes
 
-export const fetchRecipesrequested = () => ({
+export const fetchRecipesRequested = () => ({
   type: FETCH_RECIPES_REQUESTED,
 })
 
