@@ -6,7 +6,7 @@ const {
   FETCH_RECIPES_FAILED,
 } = apiActionTypes
 const INITIAL_STATE = {
-  RECIPES: {},
+  recipes: [],
   isLoading: false,
   isError: false,
 }
@@ -23,7 +23,7 @@ const apiReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         isLoading: false,
-        RECIPES: action.payload,
+        recipes: action.payload,
       }
     case FETCH_RECIPES_FAILED:
       return {

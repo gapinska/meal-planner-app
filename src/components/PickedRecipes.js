@@ -5,7 +5,7 @@ const PickedRecipes = ({ recipes }) => {
   return (
     <div>
       <div>Your recipes:</div>
-      {recipes &&
+      {recipes.length > 0 &&
         recipes.map((recipe) => <Recipe key={recipe.id} recipe={recipe} />)}
     </div>
   )

@@ -25,7 +25,7 @@ const HomeContainer = () => {
     formState,
   } = useForm()
   const dispatch = useDispatch()
-  const recipes = useSelector((state) => state.apiReducer.RECIPES)
+  const recipes = useSelector((state) => state.apiReducer.recipes)
 
   const onSubmit = ({ ingredients }) => {
     dispatch(setHistory(ingredients))
@@ -50,7 +50,11 @@ const HomeContainer = () => {
           </Button>
         </FormControl>
       </form>
-      {recipes && <PickedRecipes recipes={recipes.products} />}
+      {recipes.products?.length > 0 ? (
+        <PickedRecipes recipes={recipes.products} />
+      ) : (
+        <div>No recipes</div>
+      )}
     </div>
   )
 }
